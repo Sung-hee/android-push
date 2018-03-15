@@ -1,4 +1,4 @@
-package com.example.user.pushtest;
+package com.goldpush.user.pushtest;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

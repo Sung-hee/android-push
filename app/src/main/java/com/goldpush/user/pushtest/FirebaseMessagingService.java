@@ -1,10 +1,9 @@
-package com.example.user.pushtest;
+package com.goldpush.user.pushtest;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -12,10 +11,6 @@ import android.os.PowerManager;
 import android.support.v4.app.NotificationCompat;
 
 import com.google.firebase.messaging.RemoteMessage;
-
-import java.io.BufferedInputStream;
-import java.net.URL;
-import java.net.URLConnection;
 
 
 public class FirebaseMessagingService extends com.google.firebase.messaging.FirebaseMessagingService{
@@ -32,7 +27,7 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
 //        String content = remoteMessage.getData().get("content");
         String title = remoteMessage.getData().get("title");
         String body = remoteMessage.getData().get("body");
-
+        
         sendPushNotification(title, body);
     }
 

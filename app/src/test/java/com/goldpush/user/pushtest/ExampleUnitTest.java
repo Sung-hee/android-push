@@ -1,4 +1,4 @@
-package com.example.user.pushtest;
+package com.goldpush.user.pushtest;
 
 import org.junit.Test;
 
