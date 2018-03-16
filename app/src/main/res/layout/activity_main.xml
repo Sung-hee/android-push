@@ -1,26 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.goldpush.user.pushtest.MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
         android:layout_width="match_parent"
-        android:layout_height="189dp"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/goldpush_play" />
+        android:layout_height="190dp"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/text_view_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="adsf"
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="205dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/goldpush_play" />
 
+    </android.support.v4.widget.SwipeRefreshLayout>
+        <android.widget.FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10">
 
-</android.widget.FrameLayout>
+            <TextView
+                android:id="@+id/text_view_result"
+                android:layout_width="fill_parent"
+                android:layout_height="270dp"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:background="@drawable/textlines"/>
+
+            <android.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom">
+
+                <ImageView
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:src="@drawable/reading" />
+
+                <Switch
+                    android:id="@+id/checkswitch"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:thumb="@drawable/switch_thumb_selector"
+                    android:track="@drawable/switch_track_selector" />
+            </android.widget.LinearLayout>
+
+        </android.widget.FrameLayout>
+
+</android.widget.LinearLayout>
